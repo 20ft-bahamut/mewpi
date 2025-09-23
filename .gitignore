@@ -1,0 +1,48 @@
+# Laravel (api/)
+api/vendor/
+api/node_modules/
+api/storage/*.key
+api/.env
+api/.phpunit.result.cache
+api/public/storage
+api/bootstrap/cache/*.php
+
+# Svelte (admin/, front/)
+admin/node_modules/
+admin/.svelte-kit/
+admin/.env
+front/node_modules/
+front/.svelte-kit/
+front/.env
+
+# Plugin & Theme
+plugin/**/node_modules/
+plugin/**/.env
+theme/**/node_modules/
+theme/**/.env
+
+# Docker
+docker/*.log
+docker/.env
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs & temp
+*.log
+*.tmp
+*.bak
+
+# Tests
+tests/.coverage/
+tests/.nyc_output/
+
+# Misc
+.env
+.env.local
+.env.*.local
