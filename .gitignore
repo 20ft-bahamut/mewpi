@@ -1,48 +1,65 @@
-# Laravel (api/)
-api/vendor/
-api/node_modules/
-api/storage/*.key
-api/.env
-api/.phpunit.result.cache
-api/public/storage
-api/bootstrap/cache/*.php
-
-# Svelte (admin/, front/)
-admin/node_modules/
-admin/.svelte-kit/
-admin/.env
-front/node_modules/
-front/.svelte-kit/
-front/.env
-
-# Plugin & Theme
-plugin/**/node_modules/
-plugin/**/.env
-theme/**/node_modules/
-theme/**/.env
-
-# Docker
-docker/*.log
-docker/.env
-
-# IDE & OS
-.idea/
-.vscode/
-*.swp
-*.swo
+# OS
 .DS_Store
 Thumbs.db
 
-# Logs & temp
-*.log
-*.tmp
-*.bak
+# Editors / IDE
+.idea/
+.vscode/
+*.swp
 
-# Tests
-tests/.coverage/
-tests/.nyc_output/
-
-# Misc
+# Env
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
+
+# Logs & coverage
+*.log
+logs/
+coverage/
+**/.nyc_output
+
+# --- API (Laravel) ---
+/api/.env
+/api/vendor/
+/api/bootstrap/cache/
+/api/storage/*.key
+/api/storage/app/*
+!/api/storage/app/public/.gitkeep
+/api/storage/framework/cache/*
+!/api/storage/framework/cache/.gitkeep
+/api/storage/framework/sessions/*
+!/api/storage/framework/sessions/.gitkeep
+/api/storage/framework/views/*
+!/api/storage/framework/views/.gitkeep
+/api/storage/logs/*
+/api/public/storage
+/api/.phpunit.result.cache
+/api/node_modules/
+
+# --- Admin (Svelte) ---
+/admin/.env
+/admin/node_modules/
+/admin/dist/
+/admin/build/
+/admin/.vite
+
+# --- Front (Svelte) ---
+/front/.env
+/front/node_modules/
+/front/dist/
+/front/build/
+/front/.vite
+
+# --- Plugins & Theme build artifacts ---
+/plugins/**/node_modules/
+/plugins/**/vendor/
+/plugins/**/dist/
+/theme/**/node_modules/
+/theme/**/dist/
+
+# --- Docker local data ---
+/docker/data/
+/docker/**/*.log
+
+# --- Misc ---
+*.cache
