@@ -1,0 +1,25 @@
+{
+  "name": "User",
+  "slug": "user",                      // 없으면 폴더명으로 대체
+  "version": "0.1.0",
+  "title": "회원관리",
+  "description": "회원 계정/인증/설정",
+  "author": { "name": "20ft-bahamut", "url": "https://github.com/20ft-bahamut" },
+  "repo_url": "https://github.com/20ft-bahamut/mewpi-user",
+  "license": "MIT",
+  "requires": {
+    "php": ">=8.3",
+    "laravel": ">=12.0",
+    "mewpi": ">=0.1.0",
+    "plugins": { "commerce": ">=0.2.0" }
+  },
+  "api": {
+    "psr4": "Plugins\\\\User\\\\Api\\\\",
+    "routes": "api/routes/public.php"
+  },
+  "admin": {
+    "path": "admin",                   // Svelte 소스 루트(선택)
+    "menu": [{ "label": "회원관리", "path": "/plugins/user", "icon": "Users" }]
+  },
+  "migrations_path": "api/src/Database/migrations"
+}
